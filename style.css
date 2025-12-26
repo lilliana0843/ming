@@ -154,10 +154,14 @@ body {
   border-radius: 50%;
   /* 圓形頭像 */
 
-  box-shadow: 0 0 40px rgba(255,255,255,0.15);
+  box-shadow: 0 0 40px rgba(255,255,255,0.30);
   /* 柔和光暈，像被月光照亮 */
 }
 
+/* 早見明里 */
+.hero h2 {
+font-size: 30px;
+}
 
 /* 角色副標題 */
 .subtitle {
@@ -172,7 +176,7 @@ body {
 /* 角色描述文字 */
 .desc {
   font-size: 20px;
-  max-width: 550px;
+  max-width: 800px;
   /* 限制文字寬度，避免一行太長 */
 
   margin: 20px auto;
@@ -184,7 +188,7 @@ body {
 
  /* 調整此城的刀，皆被允許沉默。*/
 .character.dark .desc {
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 1px;
   opacity: 0.85;
 }
