@@ -163,7 +163,7 @@ body {
 .subtitle {
   color: #e6c77a;
   /* 金色文字，作為身份標示 */
-  font-size: 25px
+  font-size: 25px;
   letter-spacing: 1px;
   /* 微調字距 */
 }
@@ -171,7 +171,7 @@ body {
 
 /* 角色描述文字 */
 .desc {
-  font-size: 20px
+  font-size: 20px;
   max-width: 550px;
   /* 限制文字寬度，避免一行太長 */
 
