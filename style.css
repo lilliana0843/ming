@@ -238,14 +238,7 @@ footer {
    滾動淡入動畫（搭配 JS）
    ===================== */
 .fade-in {
-  opacity: 0;
-  /* 初始不可見 */
-
-  transform: translateY(30px);
-  /* 往下位移一點點 */
-
-  transition: all 1s ease;
-  /* 動畫時間與節奏 */
+   transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
 
