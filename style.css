@@ -148,13 +148,13 @@ body {
 
 /* 角色圖片 */
 .character img {
-  width: 220px;
+  width: 300px;
   /* 固定寬度 */
 
   border-radius: 50%;
   /* 圓形頭像 */
 
-  box-shadow: 0 0 25px rgba(255,255,255,0.15);
+  box-shadow: 0 0 40px rgba(255,255,255,0.15);
   /* 柔和光暈，像被月光照亮 */
 }
 
@@ -171,7 +171,7 @@ body {
 
 /* 角色描述文字 */
 .desc {
-  max-width: 500px;
+  max-width: 550px;
   /* 限制文字寬度，避免一行太長 */
 
   margin: 20px auto;
