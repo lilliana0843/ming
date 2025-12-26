@@ -1,46 +1,97 @@
 <!DOCTYPE html>
+<!-- 告訴瀏覽器：這是一份 HTML5 文件 -->
+
 <html lang="zh-Hant">
+<!-- 整個網頁的最外層，lang 指定語言為繁體中文 -->
+
 <head>
+  <!-- head 裡放的是「設定資訊」，不會直接顯示在畫面上 -->
+
   <meta charset="UTF-8">
+  <!-- 設定文字編碼為 UTF-8，避免中文變成亂碼 -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 手機裝置必備：讓畫面寬度等於裝置寬度，避免縮放錯誤 -->
+
   <title>觀月城｜角色一覽</title>
+  <!-- 瀏覽器分頁上顯示的標題 -->
+
   <link rel="stylesheet" href="style.css">
+  <!-- 載入外部 CSS 樣式檔（style.css） -->
+
 </head>
+
 <body>
+<!-- body 裡的內容才是實際顯示在畫面上的 -->
 
 <header class="nav">
+  <!-- 網站頁首區域，class="nav" 供 CSS 設計導覽列樣式 -->
+
   <div class="logo">觀月城</div>
+  <!-- 網站標誌或名稱，目前是純文字 -->
+
   <nav>
+    <!-- 導覽列語意標籤 -->
+
     <a href="#akari">審神者</a>
+    <!-- 點擊後會滑動到 id="akari" 的區塊 -->
+
     <a href="#swords">刀劍</a>
+    <!-- 點擊後會滑動到 id="swords" 的區塊 -->
   </nav>
 </header>
 
 <section class="hero">
+  <!-- 首頁主視覺區塊（通常是第一眼看到的畫面） -->
+
   <h1>觀月城</h1>
+  <!-- 主標題 -->
+
   <p>月下所觀，並非戰場。</p>
+  <!-- 副標語／世界觀文字 -->
 </section>
 
 <section id="akari" class="character">
+  <!-- 角色區塊，id 用來給導覽列跳轉 -->
+
   <img src="https://images.plurk.com/7KHHLmq6i3WDajqNYbBRKp.jpg" alt="早見明里">
+  <!-- 角色圖片，alt 是圖片無法顯示時的替代文字 -->
+
   <h2>早見 明里</h2>
+  <!-- 角色名稱 -->
+
   <p class="subtitle">審神者｜觀月城城主</p>
+  <!-- 角色副標題 -->
+
   <p class="desc">
+    <!-- 角色描述文字 -->
     出身破落神社的普通女孩，  
     並非為殺伐而來，卻被捲入時間的洪流之中。
   </p>
+
   <a href="akari.html" class="btn">進入個人頁</a>
+  <!-- 連到早見明里的詳細角色頁 -->
 </section>
 
 <section id="swords" class="character dark">
+  <!-- 刀劍男士區塊，dark 用來套用較深色背景 -->
+
   <h2>刀劍男士</h2>
+  <!-- 區塊標題 -->
+
   <p class="desc">此城的刀，皆被允許沉默。</p>
+  <!-- 區塊描述文字 -->
 </section>
   
 <section class="character fade-in">
+  <!-- 預留區塊，fade-in 通常搭配 JS 做滑入動畫 -->
+</section>
 
 <footer>
+  <!-- 網站頁尾 -->
+
   <p>© 觀月城</p>
+  <!-- 版權資訊 -->
 </footer>
 
 </body>
