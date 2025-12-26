@@ -14,7 +14,7 @@ const observer = new IntersectionObserver(entries => {
       // 就在這個元素身上加上 class="show"
       // 讓 CSS 的 .fade-in.show 生效
       entry.target.classList.add('show');
-      observer.unobserve(entry.target); // 出現一次就不再監聽
+      
     }
   });
 });
