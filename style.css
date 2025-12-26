@@ -240,19 +240,19 @@ html {
 /* =====================
    滾動淡入動畫（搭配 JS）
    ===================== */
+/* 預設：沒 JS 時，內容是可見的 */
 .fade-in {
-   opacity: 0;
+  opacity: 1;
+}
+
+/* 只有在 JS 存在時才啟用動畫 */
+.js .fade-in {
+  opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-
-/* 當 JS 加上 show class 時 */
-.fade-in.show {
+.js .fade-in.show {
   opacity: 1;
-  /* 變為可見 */
-
   transform: translateY(0);
-  /* 回到原本位置 */
 }
-
