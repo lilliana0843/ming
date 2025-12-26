@@ -148,7 +148,7 @@ body {
 
 /* 角色圖片 */
 .character img {
-  width: 300px;
+  width: 500px;
   /* 固定寬度 */
 
   border-radius: 50%;
@@ -163,7 +163,7 @@ body {
 .subtitle {
   color: #e6c77a;
   /* 金色文字，作為身份標示 */
-
+  font-size: 25px
   letter-spacing: 1px;
   /* 微調字距 */
 }
@@ -171,6 +171,7 @@ body {
 
 /* 角色描述文字 */
 .desc {
+  font-size: 20px
   max-width: 550px;
   /* 限制文字寬度，避免一行太長 */
 
@@ -183,7 +184,7 @@ body {
 
  /* 調整此城的刀，皆被允許沉默。*/
 .character.dark .desc {
-  font-size: 18px;
+  font-size: 25px;
   letter-spacing: 1px;
   opacity: 0.85;
 }
