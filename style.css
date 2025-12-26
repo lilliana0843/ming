@@ -233,12 +233,17 @@ footer {
   /* 淡色文字 */
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* =====================
    滾動淡入動畫（搭配 JS）
    ===================== */
 .fade-in {
-   transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+   opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 
@@ -250,3 +255,4 @@ footer {
   transform: translateY(0);
   /* 回到原本位置 */
 }
+
