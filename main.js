@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 // 建立一個 IntersectionObserver 物件
 // 它會幫我們「觀察元素有沒有進入畫面」
 const observer = new IntersectionObserver(entries => {
