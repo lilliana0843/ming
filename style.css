@@ -1,118 +1,259 @@
+/* 套用到所有元素（* 代表全部） */
 * {
   box-sizing: border-box;
+  /* 設定寬高計算方式：
+     width / height 會包含 padding 和 border，
+     排版時比較不容易爆版 */
 }
 
 
+/* 整個頁面基礎設定 */
 body {
   margin: 0;
+  /* 移除瀏覽器預設的外距 */
+
   font-family: "Noto Serif TC", serif;
+  /* 設定字型：
+     先使用 Noto Serif TC（繁中字型），
+     如果沒有就使用系統內建 serif */
+
   background: linear-gradient(#05070c, #0b1020);
+  /* 背景漸層：
+     上深下淺，營造夜色 / 月下氛圍 */
+
   color: #e8e8e8;
+  /* 全站預設文字顏色（偏亮，適合深色背景） */
+
   scroll-behavior: smooth;
+  /* 讓錨點跳轉（#id）時使用平滑滑動效果 */
 }
 
-/* 導覽列 */
+
+/* =====================
+   導覽列（header.nav）
+   ===================== */
 .nav {
   position: fixed;
+  /* 固定在畫面上方，滑動頁面時不會消失 */
+
   top: 0;
+  /* 貼齊畫面最上方 */
+
   width: 100%;
+  /* 導覽列寬度滿版 */
+
   background: rgba(5, 7, 12, 0.8);
+  /* 半透明深色背景，避免遮住內容又保有層次 */
+
   display: flex;
+  /* 使用 Flex 排版 */
+
   justify-content: space-between;
+  /* 左右兩側對齊（logo 在左，nav 在右） */
+
   padding: 12px 30px;
+  /* 上下 12px，左右 30px 的內距 */
+
   z-index: 100;
+  /* 提高層級，避免被其他元素蓋住 */
 }
 
+
+/* 導覽列裡的連結 */
 .nav a {
   color: #c9c9c9;
+  /* 預設連結顏色（偏灰白） */
+
   margin-left: 20px;
+  /* 每個連結之間留間距 */
+
   text-decoration: none;
+  /* 移除預設底線 */
 }
 
+
+/* 滑鼠移到導覽列連結時 */
 .nav a:hover {
   color: #e6c77a;
+  /* 變成淡金色，增加互動感 */
 }
 
+
+/* 左上角 logo 文字 */
 .logo {
   letter-spacing: 2px;
+  /* 拉開字距，讓標誌更有儀式感 */
 }
 
-/* 首頁主視覺 */
+
+/* =====================
+   首頁主視覺區塊
+   ===================== */
 .hero {
   height: 100vh;
+  /* 高度等於整個螢幕高度 */
+
   display: flex;
+  /* 使用 Flex 排版 */
+
   flex-direction: column;
+  /* 垂直排列（標題在上，文字在下） */
+
   justify-content: center;
+  /* 垂直置中 */
+
   text-align: center;
+  /* 文字水平置中 */
 }
 
+
+/* 主標題（觀月城） */
 .hero h1 {
   font-size: 48px;
+  /* 字體大小 */
+
   letter-spacing: 8px;
+  /* 大字距，營造莊重感 */
 }
 
+
+/* 副標語 */
 .hero p {
   color: #aaa;
+  /* 顏色比主標題淡 */
+
   margin-top: 10px;
+  /* 與標題保持距離 */
 }
 
-/* 角色區塊 */
+
+/* =====================
+   角色區塊通用設定
+   ===================== */
 .character {
   padding: 120px 20px;
+  /* 上下空間大，營造「段落感」 */
+
   text-align: center;
+  /* 角色資訊置中 */
 }
 
+
+/* 深色變化版角色區塊 */
 .character.dark {
   background: rgba(255,255,255,0.03);
+  /* 非純黑，增加層次但不搶畫面 */
 }
 
+
+/* 角色圖片 */
 .character img {
   width: 220px;
+  /* 固定寬度 */
+
   border-radius: 50%;
+  /* 圓形頭像 */
+
   box-shadow: 0 0 25px rgba(255,255,255,0.15);
+  /* 柔和光暈，像被月光照亮 */
 }
 
+
+/* 角色副標題 */
 .subtitle {
   color: #e6c77a;
+  /* 金色文字，作為身份標示 */
+
   letter-spacing: 1px;
+  /* 微調字距 */
 }
 
+
+/* 角色描述文字 */
 .desc {
   max-width: 500px;
+  /* 限制文字寬度，避免一行太長 */
+
   margin: 20px auto;
+  /* 上下 20px，左右自動置中 */
+
   line-height: 1.8;
+  /* 行距拉開，閱讀更舒服 */
 }
 
-/* 按鈕 */
+
+/* =====================
+   按鈕樣式
+   ===================== */
 .btn {
   display: inline-block;
+  /* 讓 a 標籤可以設定寬高 */
+
   border: 1px solid #e6c77a;
+  /* 金色邊框 */
+
   padding: 10px 22px;
+  /* 按鈕內距 */
+
   color: #e6c77a;
+  /* 文字顏色 */
+
   text-decoration: none;
+  /* 移除底線 */
+
   border-radius: 20px;
+  /* 圓角按鈕 */
+
   transition: all 0.3s;
+  /* 滑入滑出動畫 */
 }
 
+
+/* 滑鼠移到按鈕時 */
 .btn:hover {
   background: #e6c77a;
+  /* 背景變金色 */
+
   color: #05070c;
+  /* 文字變深色，形成對比 */
 }
 
+
+/* =====================
+   頁尾
+   ===================== */
 footer {
   text-align: center;
+  /* 置中 */
+
   padding: 40px;
+  /* 留白 */
+
   color: #777;
+  /* 淡色文字 */
 }
 
+
+/* =====================
+   滾動淡入動畫（搭配 JS）
+   ===================== */
 .fade-in {
   opacity: 0;
+  /* 初始不可見 */
+
   transform: translateY(30px);
+  /* 往下位移一點點 */
+
   transition: all 1s ease;
+  /* 動畫時間與節奏 */
 }
 
+
+/* 當 JS 加上 show class 時 */
 .fade-in.show {
   opacity: 1;
-  transform: translateY(0);
-}
+  /* 變為可見 */
 
+  transform: translateY(0);
+  /* 回到原本位置 */
+}
