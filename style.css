@@ -181,6 +181,13 @@ body {
   /* 行距拉開，閱讀更舒服 */
 }
 
+ /* 調整此城的刀，皆被允許沉默。*/
+.character.dark .desc {
+  font-size: 18px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
 
 /* =====================
    按鈕樣式
