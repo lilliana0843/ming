@@ -1,8 +1,87 @@
-/* 基本重置 */
-body {
-  margin: 0;
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
+  /* 設定寬高計算方式：
+     width / height 會包含 padding 和 border，
+     排版時比較不容易爆版 */
 }
+
+/* 整個頁面基礎設定 */
+body {
+   margin: 0;
+  /* 移除瀏覽器預設的外距 */
+   font-family: "Noto Serif TC", serif;
+  /* 設定字型：
+     先使用 Noto Serif TC（繁中字型），
+     如果沒有就使用系統內建 serif */
+   background: linear-gradient(#05070c, #0b1020);
+  /* 背景漸層：
+     上深下淺，營造夜色 / 月下氛圍 */
+
+  color: #e8e8e8;
+  /* 全站預設文字顏色（偏亮，適合深色背景） */
+
+  scroll-behavior: smooth;
+  /* 讓錨點跳轉（#id）時使用平滑滑動效果 */
+}
+
+/* =====================
+   導覽列（header.nav）
+   ===================== */
+.nav {
+  position: fixed;
+  /* 固定在畫面上方，滑動頁面時不會消失 */
+
+  top: 0;
+  /* 貼齊畫面最上方 */
+
+  width: 100%;
+  /* 導覽列寬度滿版 */
+
+  background: rgba(5, 7, 12, 0.8);
+  /* 半透明深色背景，避免遮住內容又保有層次 */
+
+  display: flex;
+  /* 使用 Flex 排版 */
+
+  justify-content: space-between;
+  /* 左右兩側對齊（logo 在左，nav 在右） */
+
+  padding: 12px 30px;
+  /* 上下 12px，左右 30px 的內距 */
+
+  z-index: 100;
+  /* 提高層級，避免被其他元素蓋住 */
+}
+
+/* 導覽列裡的連結 */
+.nav a {
+  color: #c9c9c9;
+  /* 預設連結顏色（偏灰白） */
+
+  margin-left: 20px;
+  /* 每個連結之間留間距 */
+
+  text-decoration: none;
+  /* 移除預設底線 */
+}
+
+
+/* 滑鼠移到導覽列連結時 */
+.nav a:hover {
+  color: #e6c77a;
+  /* 變成淡金色，增加互動感 */
+}
+
+
+/* 左上角 logo 文字 */
+.logo {
+  letter-spacing: 2px;
+  /* 拉開字距，讓標誌更有儀式感 */
+}
+
+/* =====================
+   首頁主視覺區塊
+   ===================== */
 
 /* 頁首 */
 header {
