@@ -72,7 +72,6 @@ body {
   /* 變成淡金色，增加互動感 */
 }
 
-
 /* 左上角 logo 文字 */
 .logo {
   letter-spacing: 2px;
@@ -92,10 +91,23 @@ header {
 
 /* 角色區塊 */
 .character {
+  max-width: 1000px;
+  margin: 80px auto;
   padding: 40px;
-  border-bottom: 1px solid #ddd;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;          /* ★ 關鍵 */
+  gap: 0px;              /* 左右欄間距 */
+  border-bottom: 1px solid #ddd; /* 線 */
+}
+
+.character-left {
+  width: 280px;     /* 固定寬度，適合人物資料 */
+  flex-shrink: 0;   /* 不被壓縮 */
+}
+.character-right {
+  flex: 1;          /* 吃掉剩餘空間 */
+}
+.divider1 {
+  transform: translateX(-50px);
 }
 
 /* 圖片 */
@@ -106,8 +118,45 @@ header {
   object-fit: cover;
 }
 
-/* 角色稱號 */
-.role {
-  color: #666;
+/*返回鍵區塊*/
+.move-down {
+  margin-top: 500px; /* 往下推 */
+  text-align: center;
+  border-bottom: 1px solid #ddd; /* 線 */
+  padding: 40px;
+}
+
+
+/* 文字改色調整 */
+.character-left h1 {
+   color: #e6c77a;
+   margin-bottom: 0px;}
+.character-left h2 {
+   color: #e6c77a;
+   font-size: 18px;
+   margin-top: 0px; 
+}
+
+.subtitle {
   font-size: 14px;
+  }
+.desc1 {
+  font-weight: bold;
+  color: #e6c77a;
+  font-size: 20px;
+  }
+.desc2 .value {
+  color: #e96752;   
+}
+.desc2 .value2 {
+  color: #feaf7d;   
+}
+.desc3 {
+  font-weight: bold;
+  color: #e6c77a;
+  font-size: 20px;
+  }
+
+.btn {
+  color: #ffffff;   
 }
