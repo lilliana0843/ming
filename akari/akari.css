@@ -160,3 +160,14 @@ header {
 .btn {
   color: #ffffff;   
 }
+
+@media (max-width: 768px) {
+  .character {
+    flex-direction: column;
+  }
+
+  .character-left {
+    width: 100%;
+    text-align: center;
+  }
+}
