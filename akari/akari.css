@@ -51,6 +51,9 @@ body {
 
   z-index: 100;
   /* 提高層級，避免被其他元素蓋住 */
+  
+   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+   /* 邊線 */
 }
 
 /* 導覽列裡的連結 */
@@ -89,7 +92,9 @@ header {
   background: #f5f5f5;
 }
 
-/* 角色區塊 */
+/* =====================
+角色區塊 
+ ===================== */
 .character {
   max-width: 1000px;
   margin: 80px auto;
@@ -100,14 +105,14 @@ header {
 }
 
 .character-left {
-  width: 280px;     /* 固定寬度，適合人物資料 */
+  width: 400px;     /* 固定寬度，適合人物資料 */
   flex-shrink: 0;   /* 不被壓縮 */
 }
 .character-right {
   flex: 1;          /* 吃掉剩餘空間 */
 }
 .divider1 {
-  transform: translateX(-50px);
+  transform: translateX(-40px);
 }
 
 /* 圖片 */
@@ -126,24 +131,87 @@ header {
   padding: 40px;
 }
 
+/* 外層：讓兩組並排 */
+.emblem-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
 
-/* 文字改色調整 */
+/* 每一組：圖片在上、文字在下 */
+.emblem-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 文字置中在圖片下 */
+}
+
+/* 圖片大小 */
+.emblem-item img {
+  width: 200px;
+  height: auto;
+}
+
+/* 圖片下方文字 */
+.emblem-text {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+/*=====================
+dstail區
+=======================*/
+
+.character-detail {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 40px;
+  display: flex;          /* ★ 關鍵 */
+  gap: 0px;              /* 左右欄間距 */
+  border-bottom: 1px solid #ddd; /* 線 */
+}
+
+.character-detail-left {
+  width: 600px;     /* 固定寬度，適合人物資料 */
+  flex-shrink: 0;   /* 不被壓縮 */
+}
+
+.character-detail-right {
+  flex: 1;          /* 吃掉剩餘空間 */
+}
+
+/* 圖片 */
+.character-detail img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =============================
+文字調整
+================================*/
 .character-left h1 {
    color: #e6c77a;
-   margin-bottom: 0px;}
+   margin-bottom: 0px;
+   font-size: 30px;}
 .character-left h2 {
    color: #e6c77a;
-   font-size: 18px;
+   font-size: 20px;
    margin-top: 0px; 
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 16px;
   }
 .desc1 {
   font-weight: bold;
   color: #e6c77a;
-  font-size: 20px;
+  font-size: 22px;
+  }
+.desc2 {
+  font-size: 18px;
   }
 .desc2 .value {
   color: #e96752;   
@@ -154,20 +222,12 @@ header {
 .desc3 {
   font-weight: bold;
   color: #e6c77a;
-  font-size: 20px;
+  font-size: 22px;
+  }
+.desc4 {
+  font-size: 18px;
   }
 
 .btn {
   color: #ffffff;   
-}
-
-@media (max-width: 768px) {
-  .character {
-    flex-direction: column;
-  }
-
-  .character-left {
-    width: 100%;
-    text-align: center;
-  }
 }
