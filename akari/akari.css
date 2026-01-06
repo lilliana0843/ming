@@ -233,12 +233,31 @@ dstail區
 }
 
 @media (max-width: 768px) {
-  .character {
+
+  .character,
+  .character-detail {
     flex-direction: column;
+    padding: 24px;
   }
 
-  .character-left {
+  .character-left,
+  .character-detail-left {
     width: 100%;
     text-align: center;
   }
+
+  .character img,
+  .character-detail img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .divider1 {
+    display: none;
+  }
+
+  .emblem-row {
+    justify-content: center;
+  }
 }
+
